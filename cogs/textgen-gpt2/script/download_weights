@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import os
+import shutil
+from transformers import AutoTokenizer, GPT2Model
+
+CACHE_DIR = 'weights'
+
+if os.path.exists(CACHE_DIR):
+    shutil.rmtree(CACHE_DIR)
+
+os.makedirs(CACHE_DIR)
+
+model = GPT2Model.from_pretrained('gpt2', cache_dir=CACHE_DIR)
+tokenizer = AutoTokenizer.from_pretrained('gpt2', cache_dir=CACHE_DIR)

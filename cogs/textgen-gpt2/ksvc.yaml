@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: textgen-gpt2-ksvc
+spec:
+  template:
+    spec:
+      # runtimeClassName: kontain
+      imagePullSecrets:
+      - name: container-registry # secret name
+      containers:
+        - image: ec2-18-211-111-20.compute-1.amazonaws.com:5000/textgen-gpt2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
