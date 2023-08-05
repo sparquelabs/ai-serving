@@ -1,7 +1,7 @@
-## Containeriz using cog
+## Containerize using cog
 This shows how to containerize an AI model using cog.  We use [gpt2](https://huggingface.co/gpt2) as the AI model that we use for inference.  In this case, we will showcase how to use its text-generation capabilities as part of an API.
 
-## download cog binary
+## Download cog binary
 Download cog from https://github.com/replicate/cog
 
 ```bash
@@ -10,7 +10,7 @@ sudo mv cog_linux_x86_64 /usr/local/bin/cog
 sudo chmod +x /usr/local/bin/cog
 ```
 
-## using cog to provision a Container for our AI model
+## Using cog to provision a Container for our AI model
 Create a cog yaml file for textgen-gpt2.  This file contains everything needed to provision a Container for our AI model.
 
 Please note the python_packages section.  Here we can specify the python package dependencies that are needed to run the specific AI model.
@@ -34,14 +34,14 @@ build:
 predict: "predict.py:Predictor"
 ```
 
-## download the weights of the model
+## Download the weights of the model
 Download the weights of the model using the scripts/download_weights python script.
 
 ```bash
 cog run script/download_weights
 ```
 
-## testing the AI model once using the cog
+## Testing the AI model once using the cog
 To test the AI model once using the cog, we can do the following:
 
 ```bash
@@ -70,7 +70,7 @@ docker ps
 
 It runs on port 5000 as a REST API service that can be invoked with an HTTP client.
 
-# invoke the AI model to make an inference
+# Invoke the AI model to make an inference
 We can now use curl to invoke the AI model and get an inference.
 
 ```bash
