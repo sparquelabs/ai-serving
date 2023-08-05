@@ -42,5 +42,5 @@ pruneImages:
 	sudo k3s crictl rmi --prune
 
 pushImage:
-	docker tag textgen-gpt2 ec2-18-211-111-20.compute-1.amazonaws.com:5000/textgen-gpt2
-	docker push ec2-18-211-111-20.compute-1.amazonaws.com:5000/textgen-gpt2
+	docker tag textgen-gpt2 ${MY_ECR_REPOSITORY}/textgen-gpt2:latest
+	docker push ${MY_ECR_REPOSITORY}/textgen-gpt2:latest
