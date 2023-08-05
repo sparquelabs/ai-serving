@@ -1,6 +1,6 @@
 # ai-serving
-Shows how to serve AI models
+Setup to show how to serve AI Models on the edge using k3s and knative.  
 
-This uses several steps to be able to package AI models as a container and then serve AI models using Kubernetes or k3s on the edge, or knative to be able to scale to zero.
+Part of a multi-series posts on Medium.
 
-Step 1: containerize using cog
+You can refer to cogs/textgen-gpt2 folder here to get more details.
