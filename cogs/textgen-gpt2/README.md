@@ -1,4 +1,4 @@
-## Containeriz using cog
+## Containerize using cog
 This shows how to containerize an AI model using cog.  We use [gpt2](https://huggingface.co/gpt2) as the AI model that we use for inference.  In this case, we will showcase how to use its text-generation capabilities as part of an API.
 
 ## download cog binary
