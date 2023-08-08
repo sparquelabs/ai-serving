@@ -21,3 +21,7 @@ sudo mv /tmp/registries.yaml /etc/rancher/k3s/registries.yaml
 
 # reload k3s
 sudo systemctl force-reload k3s
+
+# verify entry [plugins."io.containerd.grpc.v1.cri".registry.configs."782340374253.dkr.ecr.us-east-1.amazonaws.com".auth]
+# if it contains the username and password
+sudo cat /var/lib/rancher/k3s/agent/etc/containerd/config.toml
