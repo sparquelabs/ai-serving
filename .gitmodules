@@ -1,0 +1,3 @@
+[submodule "llms/lit-gpt"]
+	path = llms/lit-gpt
+	url = https://github.com/Lightning-AI/lit-gpt.git
